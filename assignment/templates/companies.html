@@ -1,0 +1,27 @@
+
+
+{% extends 'base.html'%}
+    {% block body %}
+    <h1>LIST OF COMPANIES AND THEIR SYMBOL</h1>
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Company Reference No</th>
+                <th>Company Name</th>
+                <th>Company Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(0, companies|length) %}
+                <tr>
+                <td>{{companies[i][0]}}</td>
+                <td>{{companies[i][1]}}</td>
+                <td>{{companies[i][2]}}</td>
+                <td>{{companies[i][3]}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% endblock body%}

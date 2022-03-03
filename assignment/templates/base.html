@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask - Web App</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/base.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    {% block cssExtra %}
+    {%endblock cssExtra%}
+</head>
+<body>
+    <div class="topnav">
+        <ul>
+
+            <li>
+                <a href="{{url_for('overview')}}">
+                    <div>
+                        <i class="fa fa-street-view"></i>
+                        <label>OVERVIEW</label>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{url_for('companies')}}">
+                    <div>
+                        <i class="fa fa-university"></i>
+                        <label>COMPANIES</label>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{url_for('categories')}}">
+                    <div>
+                        <i class="fa fa-users"></i>
+                        <label>CATEGORIES</label>
+                    </div>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{url_for('shares')}}">
+                    <div>
+                        <i class="fa fa-money"></i>
+                        <label>SHARES</label>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    {% block body %}
+
+    {% endblock body%}
+</body>
+</html>

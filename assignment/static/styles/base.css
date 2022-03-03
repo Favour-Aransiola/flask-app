@@ -1,0 +1,101 @@
+*{
+margin: 0;
+padding: 0;
+}
+.html{
+    font-size: 10px;
+}
+.topnav{
+    width: 100%;
+    display: flex;
+    background-color: rgb(27, 3, 94);
+    height:5rem;
+}
+.topnav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.topnav a{
+    text-decoration: none;
+    font-style: none;
+    color: white;
+}
+.topnav div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+
+
+}
+.topnav label{
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+/* Table Section */
+
+h1{
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 4rem;
+    color: rgb(27, 3, 94);
+}
+
+.myTable{
+    border-collapse: collapse;
+    margin: 2.5rem auto;
+    font-size: 1.3rem;
+    min-width: 40rem;
+    max-width:45rem;
+}
+.myTable thead tr{
+    background-color: rgb(27, 3, 94);
+    color: white;
+    text-align: left;
+}
+.myTable th{
+    padding: 1rem 1.5rem;
+}
+.myTable td{
+    padding: 1.2rem 1.5rem;
+}
+.myTable tbody tr{
+    border-bottom: 1px solid black;
+}
+.myTable tbody tr:last-child{
+    border-bottom: 3px solid rgb(27, 3, 94);
+}
+@media screen and (max-width:1200px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width:800px){
+    html{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:650px){
+    html{
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width:500px){
+    html{
+        font-size: 4px;
+    }
+}
+@media screen and (max-width:350px){
+    html{
+        font-size: 3px;
+    }
+}

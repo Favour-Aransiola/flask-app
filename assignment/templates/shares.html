@@ -1,0 +1,27 @@
+
+
+{% extends 'base.html'%}
+    {% block body %}
+    <h1>LIST OF COMPANY NAME AND THEIR SHARES</h1>
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Company Reference Number</th>
+                <th>Company Symbol</th>
+                <th>Shares</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(0, shares|length) %}
+                <tr>
+                <td>{{shares[i][0]}}</td>
+                <td>{{shares[i][1]}}</td>
+                <td>{{shares[i][2]}}</td>
+                <td>{{shares[i][3]}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% endblock body%}

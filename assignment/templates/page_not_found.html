@@ -1,0 +1,13 @@
+{%extends 'base.html' %}
+
+{% block cssExtra %}
+ <link rel="stylesheet" href="{{url_for('static', filename='styles/page_not_found.css')}}">
+{%endblock cssExtra%}
+
+{% block body %}
+<div class="page-not-found">
+        <i class="fa fa-frown-o"></i>
+        <label>Page not found</label>
+</div>
+
+{% endblock body%}

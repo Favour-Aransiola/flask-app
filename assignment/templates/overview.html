@@ -1,0 +1,33 @@
+
+
+{% extends 'base.html'%}
+    {% block body %}
+    <h1>LIST OF COMPANIES, THEIR CATEGORIES AND THEIR SHARES</h1>
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Company Reference Number</th>
+                <th>Company Name</th>
+                <th>Company Symbol</th>
+                <th>Category Name</th>
+                <th>Category Number</th>
+                <th>Shares</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(0, overview|length) %}
+                <tr>
+                <td>{{overview[i][0]}}</td>
+                <td>{{overview[i][1]}}</td>
+                <td>{{overview[i][2]}}</td>
+                <td>{{overview[i][3]}}</td>
+                <td>{{overview[i][4]}}</td>
+                <td>{{overview[i][5]}}</td>
+                <td>{{overview[i][6]}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% endblock body%}
