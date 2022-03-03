@@ -2,17 +2,16 @@
 
 {% extends 'base.html'%}
     {% block body %}
-    <h1>LIST OF COMPANIES, THEIR CATEGORIES AND THEIR SHARES</h1>
+    <h1>OVERVIEW OF COMPANIES, THEIR LOCATION WITH THEIR AVAILABLE JOB TITLES AND SALARIES PER YEAR, THEIR CATEGORIES AND THEIR SHARES</h1>
     <table class="myTable">
         <thead>
             <tr>
                 <th>S/N</th>
-                <th>Company Reference Number</th>
                 <th>Company Name</th>
-                <th>Company Symbol</th>
-                <th>Category Name</th>
-                <th>Category Number</th>
-                <th>Shares</th>
+                <th>Job Title</th>
+                <th>Salary per Year</th>
+                <th>Salaries Reported</th>
+                <th>Location</th>
             </tr>
         </thead>
         <tbody>
@@ -24,7 +23,6 @@
                 <td>{{overview[i][3]}}</td>
                 <td>{{overview[i][4]}}</td>
                 <td>{{overview[i][5]}}</td>
-                <td>{{overview[i][6]}}</td>
                 </tr>
             {% endfor %}
 

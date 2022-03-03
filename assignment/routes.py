@@ -5,35 +5,28 @@ from assignment import listed_companies
 
 @app.route('/companies')
 def companies():
-    companies=listed_companies [['ref', 'company_name', 'symbol']]
+    companies=listed_companies [['Company Name', 'Job Title', 'Location']]
     comp_list=[]
     for i,comp in enumerate(companies.iloc):
-        comp_list.append([i+1,comp['ref'], comp['company_name'], comp['symbol']])
+        comp_list.append([i+1,comp['Company Name'], comp['Job Title'], comp['Location']])
     return render_template('companies.html', companies= comp_list)
 
 @app.route('/categories')
 def categories():
-    categories=listed_companies [['company_name', 'symbol', 'category','category_number']]
+    categories=listed_companies [['Company Name', 'Job Title','Salary']]
     comp_list=[]
     for i,comp in enumerate(categories.iloc):
-        comp_list.append([i+1,comp['company_name'], comp['symbol'], comp['category'], comp['category_number']])
+        comp_list.append([i+1,comp['Company Name'], comp['Job Title'],comp['Salary'][1:-3]])
     return render_template('categories.html', categories= comp_list)
 
-@app.route('/shares')
-def shares():
-    shares=listed_companies [['ref', 'symbol', 'shares']]
-    comp_list=[]
-    for i,comp in enumerate(shares.iloc):
-        comp_list.append([i+1,comp['ref'], comp['symbol'], comp['shares']])
-    return render_template('shares.html', shares= comp_list)
 
 @app.route('/')
 @app.route('/overview')
 def overview():
-    overview=listed_companies [['ref', 'company_name', 'symbol', 'category_number','category','shares']]
+    overview=listed_companies [['Company Name', 'Job Title', 'Salary', 'Salaries Reported','Location']]
     comp_list=[]
     for i,comp in enumerate(overview.iloc):
-        comp_list.append([i+1,comp['ref'], comp['company_name'], comp['symbol'], comp['category'],comp['category_number'],comp['shares']])
+        comp_list.append([i+1,comp['Company Name'], comp['Job Title'], comp['Salary'][1:-3], comp['Salaries Reported'],comp['Location']])
     return render_template('overview.html', overview= comp_list)
 
 @app.errorhandler(404)

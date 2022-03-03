@@ -2,15 +2,15 @@
 
 {% extends 'base.html'%}
     {% block body %}
-    <h1>LIST OF COMPANY NAME AND THEIR CATEGORIES</h1>
+    <h1>LIST OF COMPANIES WITH THEIR SALARIES FOR EACH JOB ROLE</h1>
     <table class="myTable">
         <thead>
             <tr>
                 <th>S/N</th>
                 <th>Company Name</th>
-                <th>Company Symbol</th>
-                <th>Category Name</th>
-                <th>Category Number</th>
+                <th>Job Title</th>
+                <th>Salary per Year</th>
+
             </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@
                 <td>{{categories[i][1]}}</td>
                 <td>{{categories[i][2]}}</td>
                 <td>{{categories[i][3]}}</td>
-                <td>{{categories[i][4]}}</td>
+
                 </tr>
             {% endfor %}
 

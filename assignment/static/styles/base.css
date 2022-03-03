@@ -45,8 +45,10 @@ padding: 0;
 h1{
     font-size: 1.7rem;
     text-align: center;
-    margin-top: 4rem;
+    padding-top: 4rem;
     color: rgb(27, 3, 94);
+    width:80%;
+    margin:0 auto;
 }
 
 .myTable{
